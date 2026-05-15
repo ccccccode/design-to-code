@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "description": "Design-to-code asset manifest template.",
+  "version": "1.1.0",
+  "description": "Design-to-code asset manifest template with image generation and export optimization rules.",
   "totalFinalAssets": 0,
   "totalMasterAssets": 0,
   "totalManifestItems": 0,
@@ -8,14 +8,37 @@
     "single: one prompt generates one final asset.",
     "group_variant: one prompt group generates multiple clearly named variants.",
     "single_master: generate one master asset, then reuse/crop for multiple pages.",
-    "reuse or reuse_crop: do not regenerate; derive from reuseSource."
+    "reuse or reuse_crop: do not regenerate; derive from reuseSource.",
+    "Generate master images only once; optimize frontend formats by post-processing.",
+    "Do not regenerate images only because file size is too large. Compress or convert from the master image."
   ],
+  "exportPolicy": {
+    "compressionPolicy": "generate-once-export-many",
+    "defaultTargetFormat": "jpg",
+    "defaultFallbackFormat": "webp",
+    "qualityPreset": "balanced",
+    "minQuality": 72,
+    "keepMasterImage": true,
+    "masterDirectory": "outputs/05-generated-assets/master",
+    "reportPath": "outputs/07-quality-report/image-export-report.md",
+    "assetTypeBudgets": {
+      "banner": { "preferredFileSizeKB": 500, "maxFileSizeKB": 750, "targetFormat": "jpg", "fallbackFormat": "webp" },
+      "product": { "preferredFileSizeKB": 450, "maxFileSizeKB": 650, "targetFormat": "jpg", "fallbackFormat": "webp" },
+      "category": { "preferredFileSizeKB": 250, "maxFileSizeKB": 400, "targetFormat": "png", "fallbackFormat": "webp" },
+      "operation": { "preferredFileSizeKB": 300, "maxFileSizeKB": 450, "targetFormat": "jpg", "fallbackFormat": "webp" },
+      "detail": { "preferredFileSizeKB": 500, "maxFileSizeKB": 800, "targetFormat": "jpg", "fallbackFormat": "webp" },
+      "material": { "preferredFileSizeKB": 250, "maxFileSizeKB": 400, "targetFormat": "jpg", "fallbackFormat": "webp" },
+      "avatar": { "preferredFileSizeKB": 150, "maxFileSizeKB": 250, "targetFormat": "jpg", "fallbackFormat": "webp" },
+      "icon": { "preferredFileSizeKB": 30, "maxFileSizeKB": 80, "targetFormat": "svg", "fallbackFormat": null }
+    }
+  },
   "assets": [
     {
       "assetName": "home_banner_aw_collection",
       "page": "home",
       "assetType": "banner",
-      "outputPath": "/static/images/banner/home_banner_aw_collection.png",
+      "outputPath": "/static/images/banner/home_banner_aw_collection.jpg",
+      "masterPath": "outputs/05-generated-assets/master/home_banner_aw_collection.png",
       "recommendedSize": "1380x600",
       "transparent": false,
       "generationMode": "single",
@@ -25,7 +48,14 @@
       "variantName": "two_models_autumn_winter_commuter_banner",
       "reuseSource": null,
       "styleDifference": "Hero banner with main subject on one side and clean blank area for frontend overlay.",
-      "frontEndUsage": "Use as banner background; overlay text and buttons in frontend code."
+      "frontEndUsage": "Use as banner background; overlay text and buttons in frontend code.",
+      "targetFormat": "jpg",
+      "fallbackFormat": "webp",
+      "preferredFileSizeKB": 500,
+      "maxFileSizeKB": 650,
+      "minQuality": 72,
+      "qualityPreset": "balanced",
+      "compressionPolicy": "generate-once-export-many"
     }
   ]
 }
