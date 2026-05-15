@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "description": "Design-to-code asset manifest template.",
+  "totalFinalAssets": 0,
+  "totalMasterAssets": 0,
+  "totalManifestItems": 0,
+  "rules": [
+    "single: one prompt generates one final asset.",
+    "group_variant: one prompt group generates multiple clearly named variants.",
+    "single_master: generate one master asset, then reuse/crop for multiple pages.",
+    "reuse or reuse_crop: do not regenerate; derive from reuseSource."
+  ],
+  "assets": [
+    {
+      "assetName": "home_banner_aw_collection",
+      "page": "home",
+      "assetType": "banner",
+      "outputPath": "/static/images/banner/home_banner_aw_collection.png",
+      "recommendedSize": "1380x600",
+      "transparent": false,
+      "generationMode": "single",
+      "promptGroup": "home_banner_aw_collection",
+      "promptGroupOutputCount": 1,
+      "variantIndex": 1,
+      "variantName": "two_models_autumn_winter_commuter_banner",
+      "reuseSource": null,
+      "styleDifference": "Hero banner with main subject on one side and clean blank area for frontend overlay.",
+      "frontEndUsage": "Use as banner background; overlay text and buttons in frontend code."
+    }
+  ]
+}
