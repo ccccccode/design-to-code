@@ -1,0 +1,31 @@
+{
+  "version": "1.1.0",
+  "description": "Example prompt group mapping.",
+  "promptGroups": [
+    {
+      "promptGroup": "category_single_blazers",
+      "declaredOutputCount": 2,
+      "generationModeExamples": [
+        "group_variant"
+      ],
+      "assets": [
+        {
+          "assetName": "category_short_blazer",
+          "variantIndex": 1,
+          "variantName": "short_black_blazer",
+          "outputPath": "/static/images/category/category_short_blazer.png",
+          "reuseSource": null,
+          "styleDifference": "Short black blazer."
+        },
+        {
+          "assetName": "category_boxy_blazer",
+          "variantIndex": 2,
+          "variantName": "boxy_beige_blazer",
+          "outputPath": "/static/images/category/category_boxy_blazer.png",
+          "reuseSource": null,
+          "styleDifference": "Boxy beige blazer."
+        }
+      ]
+    }
+  ]
+}
