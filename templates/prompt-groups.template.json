@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "description": "Prompt group mapping template.",
+  "promptGroups": [
+    {
+      "promptGroup": "category_single_products",
+      "declaredOutputCount": 6,
+      "generationModeExamples": [
+        "group_variant"
+      ],
+      "assets": [
+        {
+          "assetName": "category_product_01",
+          "variantIndex": 1,
+          "variantName": "short_black_blazer",
+          "outputPath": "/static/images/category/category_product_01.png",
+          "reuseSource": null,
+          "styleDifference": "Short black blazer, cropped silhouette."
+        }
+      ]
+    }
+  ]
+}
