@@ -1,11 +1,12 @@
----
-name: design-to-code
-description: Convert UI design images into a confirmed frontend implementation workflow: page analysis, asset manifest, image-generation prompts, generated clean assets, and frontend handoff documentation. Optimized for ecommerce UI, uniapp, Vue3, TypeScript, and image-generation based asset rebuilding.
----
+# Design to Code
 
-# design-to-code Skill
+## Description
 
-## Purpose
+Use this skill when the user provides UI design screenshots, mobile app screens, ecommerce app designs, Figma exports, product page screenshots, or visual design images and wants to convert them into frontend implementation assets, image-generation prompts, clean image assets, and a frontend handoff document.
+
+This skill is especially useful for uniapp, Vue3, TypeScript, ecommerce UI, mobile app UI, design-to-code workflows, asset manifests, GPT image prompts, clean asset rebuilding, and frontend page implementation handoff.
+
+## Instructions
 
 This skill turns UI design screenshots or exported design images into a production-ready frontend workflow.
 
@@ -221,6 +222,22 @@ The handoff must start with:
 
 You are continuing a design-to-code workflow. Do not re-slice screenshots. Use this document as the source of truth.
 ```
+
+## Local Codex Installation Check
+
+The expected local path is:
+
+```txt
+C:\Users\PC\.codex\skills\design-to-code\SKILL.md
+```
+
+Do not nest the repository twice. This path is wrong:
+
+```txt
+C:\Users\PC\.codex\skills\design-to-code\design-to-code\SKILL.md
+```
+
+After updating the skill, fully restart Codex App so it rescans the skills directory.
 
 ## Final Response Requirement
 
