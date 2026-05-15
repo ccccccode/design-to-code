@@ -1,3 +1,8 @@
+---
+name: design-to-code
+description: Use this skill when converting UI design screenshots, mobile app screens, ecommerce pages, Figma exports, or visual design images into frontend implementation assets, image-generation prompts, clean image assets, and a frontend handoff document for uniapp, Vue3, TypeScript, and design-to-code workflows.
+---
+
 # Design to Code
 
 ## Description
